@@ -14,8 +14,9 @@ import Navbar from "./components/Navbar.vue";
 
 /* Palette "primary" personnalisée */
 :root {
-    --primary-600: #2563eb; /* bleu par exemple */
+    --primary-600: #2563eb;
     --primary-400: #60a5fa;
+    --background-main: #334155;
 }
 
 html,
@@ -23,7 +24,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: white;
+    background: var(--background-main);
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 .app-background {

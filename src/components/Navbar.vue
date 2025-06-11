@@ -1,17 +1,29 @@
 <template>
-    <nav class="navbar">
-        <p>TrailApp</p>
-        <router-link to="/" exact>Home</router-link>
-        <router-link to="/trails">Trails</router-link>
-        <router-link to="/map">Map</router-link>
-        <router-link to="/favorites">Favorites</router-link>
-        <router-link to="/profile">Profile</router-link>
-    </nav>
+    <div class="navclass">
+        <nav class="navbar">
+            <router-link class="title" to="/" exact>TrailApp</router-link>
+            <router-link to="/trails">Courses</router-link>
+            <router-link to="/map">Classement</router-link>
+            <router-link to="/favorites">Communautés</router-link>
+        </nav>
+        <p>Profile</p>
+    </div>
 </template>
 
-<script setup></script>
+<script setup>
+import router from "@/router";
+</script>
 
 <style scoped>
+.navclass {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-right: 10%;
+    align-items: center;
+}
+
 .navbar {
     display: flex;
     gap: 2rem;
@@ -20,18 +32,26 @@
     justify-content: left;
     margin-left: 10%;
     align-items: center;
-    p {
-        font-size: 1.5rem; /* correspond à text-2xl */
-        font-weight: bold;
-        color: var(--primary-600);
-    }
+}
+
+.title {
+    font-size: 1.5rem; /* correspond à text-2xl */
+    font-weight: bold;
+    color: var(--primary-600);
 }
 
 .router-link-active {
     color: #42b983;
 }
 a {
-    color: gray;
+    color: white;
     text-decoration: none;
+    transition:
+        color 0.3s,
+        transform 0.3s cubic-bezier(0.4, 2, 0.6, 1);
+}
+a:hover {
+    color: var(--primary-400);
+    transform: translateY(-3px) scale(1.07);
 }
 </style>
