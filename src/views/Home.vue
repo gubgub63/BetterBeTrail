@@ -2,6 +2,7 @@
 import ranking from "../components/ranking.vue";
 import distance from "../components/distance.vue";
 import courses from "../components/courses.vue";
+import friendsRanking from "../components/friendsRanking.vue";
 import { onMounted } from "vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -26,6 +27,9 @@ onMounted(() => {
                 <ranking />
                 <distance />
                 <courses />
+            </div>  
+            <div class="content-grid">
+                <friendsRanking />
             </div>
         </div>
     </section>
